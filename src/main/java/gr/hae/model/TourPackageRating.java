@@ -1,3 +1,5 @@
+package gr.hae.model;
+
 public class TourPackageRating {
     Integer id;
     TourPackage tourPackage;

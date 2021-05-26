@@ -1,3 +1,5 @@
+package gr.hae.model;
+
 public class Person {
     Integer id;
     String name;

@@ -1,3 +1,5 @@
+import gr.hae.model.*;
+
 import java.util.ArrayList;
 
 
