@@ -23,14 +23,14 @@ public class TesterTour {
         tour1.setDescription("nice trip");
         tour1.setDuration(2);
         tour1.setPrice(20);
-        tour1.setRegion(Region.ATTICA);
+   //     tour1.setRegion(Region.ATTICA);
 
         Tour tour2 = new Tour();
         tour2.setId(2);
         tour2.setDescription("perfect trip");
         tour2.setDuration(5);
         tour2.setPrice(50);
-        tour2.setRegion(Region.EPIRUS);
+  //      tour2.setRegion(Region.EPIRUS);
 
 
         tours.add(tour1);

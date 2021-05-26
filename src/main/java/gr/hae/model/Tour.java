@@ -1,12 +1,21 @@
 package gr.hae.model;
 
-public class Tour {
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Tour {
+@Id
 Integer id;
+
 String title;
 String description;
 Integer price;
 Integer duration;
+@ManyToOne
 Region region;
 
     public Tour(Integer id, String title, String description, Integer price, Integer duration, Region region) {

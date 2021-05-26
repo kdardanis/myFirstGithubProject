@@ -1,7 +1,11 @@
 package gr.hae.model;
 
-public class TourPackage {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class TourPackage {
+@Id
 Integer id;
 String name;
 String description;
