@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+    <th:block layout:insert="~{fragments/htmlHead}"/>
+    <body>
+        <div class="colorlib-loader"></div>
+        <div id="page">
+            <th:block layout:replace="~{fragments/topNavBar}"/>
+
+            <th:block layout:fragment="content"/>
+
+            <th:block layout:replace="~{fragments/footer}"/>
+        </div>
+        <div class="gototop js-top">
+            <a class="js-gotop" href="#"><i class="icon-arrow-up2"></i></a>
+        </div>
+        <th:block layout:replace="~{fragments/jsScripts}"/>
+    </body>
+</html>
