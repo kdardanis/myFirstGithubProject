@@ -2,12 +2,16 @@ package gr.hae.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class TourPackageRating {
     @Id
     Integer id;
+    @ManyToOne
     TourPackage tourPackage;
+    @ManyToOne
     Person person;
     Integer score;
     String comments;
