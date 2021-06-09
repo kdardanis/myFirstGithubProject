@@ -1,19 +1,22 @@
 package gr.hae.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Positive;
 
 @Entity
 public class Tour {
 @Id
+@GeneratedValue
 Integer id;
-
+@Max(80)
 String title;
+@Max(300)
 String description;
+@Positive
 Integer price;
+@Positive
 Integer duration;
 @ManyToOne
 Region region;

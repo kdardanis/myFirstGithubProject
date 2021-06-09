@@ -1,19 +1,22 @@
 package gr.hae.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 @Entity
 public class TourPackageRating {
     @Id
+    @GeneratedValue
     Integer id;
     @ManyToOne
     TourPackage tourPackage;
     @ManyToOne
     Person person;
+    @Max(5)
+    @Min(1)
     Integer score;
+    @Max(300)
     String comments;
 
     public TourPackageRating(Integer id, TourPackage tourPackage, Person person, Integer score, String comments) {

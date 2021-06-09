@@ -10,8 +10,15 @@ public class TourController {
 
    @GetMapping("/index")
    String index(ModelMap model) {
+       model.addAttribute("title","title");
        return "index";
    }
+
+   @GetMapping("/rate")
+   String rate(ModelMap model) {
+       return "rate";
+   }
+
 
 
 }

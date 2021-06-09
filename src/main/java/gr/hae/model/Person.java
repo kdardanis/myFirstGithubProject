@@ -1,14 +1,24 @@
 package gr.hae.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 @Entity
 public class Person {
     @Id
+    @GeneratedValue
     Integer id;
+    @Max(30)
+    @Min(3)
     String name;
+    @Max(30)
+    @Min(3)
     String surname;
+    @Max(30)
+    @Min(3)
     String email;
 
     public Person(Integer id, String name, String surname, String email) {

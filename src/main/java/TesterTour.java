@@ -42,7 +42,7 @@ public class TesterTour {
         tourPackage.setDescription("Package contains tour 1 and tour 2");
         tourPackage.setPrice(70);
         tourPackage.setDuration(7);
-        tourPackage.setKeywords("tour");
+
 
         Integer x = person1.rating(tourPackage.getPrice());
 
