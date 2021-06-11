@@ -8,7 +8,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img th:src="@{/img/logo.png}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -18,7 +18,7 @@
                                     <ul id="navigation">
                                         <li><a class="active" href="index.html">home</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li><a class="" href="travel_destination.html">Destination</a></l/li>
+                                        <li><a class="" href="travel_destination.html">Destination</a></li>
                                         <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="destination_details.html">Destinations details</a></li>
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="seach_icon">
+                        <div class="search_icon">
                             <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
                                 <i class="fa fa-search"></i>
                             </a>
@@ -62,6 +62,17 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="serch_form">
+                    <input type="text" placeholder="Search" >
+                    <button type="submit">search</button>
+                </div>
             </div>
         </div>
     </div>
