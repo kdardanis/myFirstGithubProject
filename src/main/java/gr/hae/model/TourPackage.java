@@ -15,13 +15,23 @@ public class TourPackage {
 Integer id;
 @Max(80)
 String name;
-@Max(300)
 String description;
-@Positive
+
+    public List<Tour> getTour() {
+        return tour;
+    }
+
+    public void setTour(List<Tour> tour) {
+        this.tour = tour;
+    }
+
+    @Positive
 Integer price;
 @Positive
 Integer duration;
 String keywords;
+@OneToMany
+List<Tour> tour;
 
     public TourPackage(Integer id, String name, String description, Integer price, Integer duration, String keywords) {
         this.id = id;
