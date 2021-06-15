@@ -17,14 +17,6 @@ Integer id;
 String name;
 String description;
 
-    public List<Tour> getTour() {
-        return tour;
-    }
-
-    public void setTour(List<Tour> tour) {
-        this.tour = tour;
-    }
-
     @Positive
 Integer price;
 @Positive
@@ -45,6 +37,15 @@ List<Tour> tour;
     public TourPackage() {
 
     }
+
+    public List<Tour> getTour() {
+        return tour;
+    }
+
+    public void setTour(List<Tour> tour) {
+        this.tour = tour;
+    }
+
 
     public Integer getId() {
         return id;

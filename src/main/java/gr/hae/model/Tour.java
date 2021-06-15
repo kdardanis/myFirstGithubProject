@@ -18,8 +18,11 @@ String description;
 Integer price;
 @Positive
 Integer duration;
-@ManyToOne
+
+
+    @ManyToOne
 Region region;
+String image;
 
     public Tour(Integer id, String title, String description, Integer price, Integer duration, Region region) {
         this.id = id;
@@ -32,6 +35,13 @@ Region region;
 
     public Tour() {
 
+    }
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Integer getId() {
