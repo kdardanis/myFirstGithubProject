@@ -11,20 +11,28 @@ import java.util.List;
 
 @Entity
 public class TourPackage {
-@Id
-@GeneratedValue
-Integer id;
-@Max(80)
-String name;
-String description;
-
+    @Id
+    @GeneratedValue
+    Integer id;
+    @Max(80)
+    String name;
+    String description;
     @Positive
-Integer price;
-@Positive
-Integer duration;
-String keywords;
-@OneToMany
-List<Tour> tour;
+    Integer price;
+    @Positive
+    Integer duration;
+    String keywords;
+    @OneToMany
+    List<Tour> tour;
+    private String image;
+
+    public String getImage() {
+        return "default.png";
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public TourPackage(Integer id, String name, String description, Integer price, Integer duration, String keywords) {
         this.id = id;

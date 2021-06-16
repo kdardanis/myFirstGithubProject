@@ -20,7 +20,7 @@ public class Tour {
 
     @ManyToOne
     Region region;
-    String image;
+    private String image;
 
     public Tour(Integer id, String title, String description, Integer price, Integer duration, Region region) {
         this.id = id;
@@ -35,7 +35,7 @@ public class Tour {
 
     }
     public String getImage() {
-        return image;
+        return "default.jpg";
     }
 
     public void setImage(String image) {
