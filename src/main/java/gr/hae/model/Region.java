@@ -6,13 +6,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Region {
-
-
-  //  ATTICA, MACEDONIA, CRETE, EPIRUS
     @Id
     @GeneratedValue
-  Integer id;
-String region;
+    Integer id;
+    String region;
 
     public Region(Integer id, String region) {
         this.id = id;

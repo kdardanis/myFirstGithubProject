@@ -7,22 +7,20 @@ import javax.validation.constraints.Positive;
 
 @Entity
 public class Tour {
-@Id
-@GeneratedValue
-Integer id;
-@Max(80)
-String title;
-@Max(300)
-String description;
-@Positive
-Integer price;
-@Positive
-Integer duration;
-
+    @Id
+    @GeneratedValue
+    Integer id;
+    @Max(80)
+    String title;
+    String description;
+    @Positive
+    Integer price;
+    @Positive
+    Integer duration;
 
     @ManyToOne
-Region region;
-String image;
+    Region region;
+    String image;
 
     public Tour(Integer id, String title, String description, Integer price, Integer duration, Region region) {
         this.id = id;

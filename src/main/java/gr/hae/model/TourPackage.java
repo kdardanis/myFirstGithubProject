@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Positive;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -43,9 +44,9 @@ List<Tour> tour;
     }
 
     public void setTour(List<Tour> tour) {
-        this.tour = tour;
+        this.tour = new ArrayList<>();
+        this.tour.addAll(tour);
     }
-
 
     public Integer getId() {
         return id;
