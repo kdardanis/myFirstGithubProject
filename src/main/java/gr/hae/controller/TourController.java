@@ -37,11 +37,11 @@ public class TourController {
         return "login";
     }
 
-    @GetMapping("/tourPackageRating/{name}")
-    public String updateTour(@PathVariable String name, Model model){
-        Optional<TourPackage> tourPackage = tourPackageService.findByName(name);
+    @GetMapping("/tourPackage/{id}")
+    public String updateTour(@PathVariable Integer id, Model model){
+        TourPackage tourPackage = tourPackageService.findById(id);
         model.addAttribute("tourPackage", tourPackage);
-        return "tourPackageRating";
+        return "tourPackage";
     }
 
 

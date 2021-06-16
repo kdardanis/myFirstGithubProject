@@ -27,5 +27,10 @@ public class TourPackageServiceImpl implements TourPackageService {
         return repo.findByName(name);
     }
 
+    @Override
+    public TourPackage findById(Integer id) {
+        return repo.findById(id).orElse(null);
+    }
+
 
 }
