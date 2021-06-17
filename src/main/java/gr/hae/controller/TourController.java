@@ -1,14 +1,18 @@
 package gr.hae.controller;
 
 import gr.hae.model.TourPackage;
+import gr.hae.model.TourPackageRating;
 import gr.hae.service.TourPackageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
@@ -44,6 +48,11 @@ public class TourController {
         return "tourPackage";
     }
 
-
+    @PostMapping("/tourPackage/{id}")
+    public String saveNewTourPackageRating(@Valid TourPackageRating tourPackageRating, BindingResult result, ModelMap model){
+        tourPackageRatingService.save(tourPackageRating);
+        System.out.println("ok");
+        return "index";
+    }
 
 }
