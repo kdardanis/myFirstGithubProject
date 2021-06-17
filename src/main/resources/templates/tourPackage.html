@@ -1,0 +1,50 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with" layout:decorate="~{layout}" with:title="'Welcome to our page'">
+<th:block layout:fragment="content">
+
+
+    <div class="destination_banner_wrap overlay">
+        <div class="destination_text text-center"><h3 th:text="${tourPackage.getName()}"></h3>
+        </div>
+    </div>
+    <div class="destination_details_info">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-9">
+                    <div class="destination_info"><h3>Description</h3>
+                        <p th:text="${tourPackage.getDescription()}"></p>
+                        <div class="single_destination"><h4>Price</h4>
+                            <p th:text="${tourPackage.getPrice()}"> </p>
+                            </div>
+                        <div class="single_destination"><h4>Duration</h4>
+                            <p th:text="${tourPackage.getDuration()}"></p>
+                            </div>
+                        <div class="single_destination"><h4 >Keywords</h4>
+                            <p th:text="${tourPackage.getKeywords()}"></p>
+                            </div>
+                    </div>
+                    <div class="bordered_1px"></div>
+                    <div class="contact_join"><h3>Rate</h3>
+                        <form method="post">
+                           <label>Rating</label><br>
+                            <input type="radio" id="one" name="rating" value="1">
+                            <label>1</label><br>
+                            <input type="radio" id="two" name="rating" value="2">
+                            <label>2</label><br>
+                            <input type="radio" id="three" name="rating" value="3">
+                            <label>3</label><br>
+                            <input type="radio" id="four" name="rating" value="4">
+                            <label>4</label><br>
+                            <input type="radio" id="five" name="rating" value="5">
+                            <label>5</label><br>
+                            <div class="submit_btn">
+                            <input type="submit" value="Submit">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
