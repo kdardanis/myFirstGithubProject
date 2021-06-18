@@ -2,15 +2,13 @@ package gr.hae.controller;
 
 import gr.hae.model.TourPackage;
 import gr.hae.model.TourPackageRating;
+import gr.hae.service.TourPackageRatingService;
 import gr.hae.service.TourPackageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.Optional;
@@ -18,9 +16,11 @@ import java.util.Optional;
 @Controller
 public class TourController {
     TourPackageService tourPackageService;
+    TourPackageRatingService tourPackageRatingService;
 
-    public TourController(TourPackageService tourPackageService){
+    public TourController(TourPackageService tourPackageService,TourPackageRatingService tourPackageRatingService ){
         this.tourPackageService = tourPackageService;
+        this.tourPackageRatingService = tourPackageRatingService;
     }
 
    @GetMapping("/index")
@@ -49,9 +49,9 @@ public class TourController {
     }
 
     @PostMapping("/tourPackage/{id}")
-    public String saveNewTourPackageRating(@Valid TourPackageRating tourPackageRating, BindingResult result, ModelMap model){
-        tourPackageRatingService.save(tourPackageRating);
-        System.out.println("ok");
+    public String saveNewTourPackageRating(@PathVariable Integer id,@RequestParam("rating") String rating,ModelMap model){
+        tourPackageRatingService.save(id,12,Integer.valueOf(rating));
+        System.out.println(rating);
         return "index";
     }
 

@@ -16,11 +16,9 @@ public class TourPackageRating {
     @Max(5)
     @Min(1)
     Integer score;
-    @Max(300)
     String comments;
 
-    public TourPackageRating(Integer id, TourPackage tourPackage, Person person, Integer score, String comments) {
-        this.id = id;
+    public TourPackageRating(TourPackage tourPackage, Person person, Integer score, String comments) {
         this.tourPackage = tourPackage;
         this.person = person;
         this.score = score;

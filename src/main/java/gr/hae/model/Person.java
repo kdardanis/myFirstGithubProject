@@ -21,8 +21,7 @@ public class Person {
     @Min(3)
     String email;
 
-    public Person(Integer id, String name, String surname, String email) {
-        this.id = id;
+    public Person(String name, String surname, String email) {
         this.name = name;
         this.surname = surname;
         this.email = email;
