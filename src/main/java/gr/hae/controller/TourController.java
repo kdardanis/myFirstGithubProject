@@ -23,7 +23,7 @@ public class TourController {
         this.tourPackageRatingService = tourPackageRatingService;
     }
 
-   @GetMapping("/index")
+   @GetMapping({"/index", "/"})
    String index(ModelMap model) {
 
        model.addAttribute("title","title");

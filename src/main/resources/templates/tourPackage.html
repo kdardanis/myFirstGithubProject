@@ -3,8 +3,8 @@
 <th:block layout:fragment="content">
 
 
-    <div class="destination_banner_wrap overlay">
-        <div class="destination_text text-center"><h3 th:text="${tourPackage.getName()}"></h3>
+    <div th:style="'padding: 340px 0; background-size: cover; background-position: center center; background-image: url('+${tourPackage.getImage()}+');'"  class='overlay' >
+        <div class="destination_text text-center"><h3 style="font-size: 80px; line-height: 90px; color: #fff; font-family: 'Nothing You Could Do', cursive; margin-bottom: 0;" th:text="${tourPackage.getName()}"></h3>
         </div>
     </div>
     <div class="destination_details_info">

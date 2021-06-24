@@ -24,15 +24,8 @@ public class TourPackage {
     String keywords;
     @OneToMany
     List<Tour> tour;
+    private String thumbnail;
     private String image;
-
-    public String getImage() {
-        return "default.png";
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
 
     public TourPackage(Integer id, String name, String description, Integer price, Integer duration, String keywords) {
         this.id = id;
@@ -102,5 +95,21 @@ public class TourPackage {
 
     public void setKeywords(String keywords) {
         this.keywords = keywords;
+    }
+
+    public String getThumbnail() {
+        return "/img/tourpackages/"+this.id+"_thumb.png";
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public String getImage() {
+        return "/img/tourpackages/"+this.id+"_banner.png";
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
